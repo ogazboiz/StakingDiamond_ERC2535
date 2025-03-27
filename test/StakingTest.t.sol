@@ -25,7 +25,7 @@ contract StakingTest is Test, DiamondUtils {
         // Initialize staking interface
         staking = IStaking(address(diamond));
         
-        // Deploy mock tokens with Akpolo branding
+       
         token = new MockERC20("Akpolo Token", "AKP");
         nft = new MockERC721("Akpolo NFT", "AKPNFT");
         multiToken = new MockERC1155("akpolo-uri/");
@@ -37,7 +37,7 @@ contract StakingTest is Test, DiamondUtils {
         // Mint tokens to users
         token.mint(user1, 1000e18);
         nft.mint(user1, 1);
-        multiToken.mint(user1, 1, 100, "");in 
+        multiToken.mint(user1, 1, 100, "");
         
         // Setup staking parameters and reward token
         vm.startPrank(diamondOwner);
