@@ -1,10 +1,14 @@
 [profile.default]
 src = 'contracts'
 out = 'out'
-libs = [
-    'lib'
+libs = ['lib']
+ffi = true
+verbosity = 5
+
+# Add this section (critical for imports)
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@arachnid/=lib/solidity-stringutils/src/",
 ]
-ffi=true
-verbosity=5
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
